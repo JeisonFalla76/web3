@@ -1,0 +1,598 @@
+/* ==============================
+   web3.css — GYS IMPORTPLAST
+   Diseño Eco-Tecnológico moderno
+   ============================== */
+
+/* --- RESET --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #1e1e1e;
+  background: #f9faf9;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* ==============================
+   VARIABLES DE COLOR
+   ============================== */
+:root {
+  --verde: #4caf50;
+  --verde-oscuro: #2e7d32;
+  --dorado: #c5a654;
+  --gris: #444;
+  --bg: #f9faf9;
+  --blanco: #fff;
+}
+
+/* ==============================
+   CONTENEDOR BASE
+   ============================== */
+.container {
+  width: min(90%, 1200px);
+  margin-inline: auto;
+}
+
+/* ==============================
+   NAVBAR SUPERIOR
+   ============================== */
+.topbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(255,255,255,0.95);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  z-index: 1000;
+  transition: 0.3s ease;
+}
+
+.topbar.scrolled {
+  background: rgba(255,255,255,1);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.topbar-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.brand-mark {
+  font-size: 1.6rem;
+}
+
+.brand-title {
+  font-weight: 700;
+  color: var(--verde-oscuro);
+  letter-spacing: 1px;
+}
+
+.brand-sub {
+  font-size: 0.8rem;
+  color: #666;
+  text-transform: uppercase;
+}
+
+/* --- NAVIGATION --- */
+.nav-list {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+.nav-list a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  position: relative;
+  transition: 0.3s;
+}
+
+.nav-list a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background: var(--verde);
+  transition: width 0.3s ease;
+}
+
+.nav-list a:hover::after {
+  width: 100%;
+}
+
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.nav-toggle span {
+  width: 25px;
+  height: 3px;
+  background: #333;
+  border-radius: 3px;
+}
+
+/* ==============================
+   HERO SECTION
+   ============================== */
+.hero {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  transform: scale(1.05);
+  filter: brightness(0.8);
+  animation: zoomHero 15s infinite alternate ease-in-out;
+}
+
+@keyframes zoomHero {
+  0% { transform: scale(1.05); }
+  100% { transform: scale(1.1); }
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 350px;
+  gap: 2rem;
+  position: relative;
+  z-index: 2;
+  color: var(--blanco);
+}
+
+.hero-card {
+  background: rgba(46,125,50,0.8);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  animation: fadeUp 1s ease-out forwards;
+}
+
+.hero-card h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-family: 'Playfair Display', serif;
+}
+
+.hero-card .lead {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  color: #e8f5e9;
+}
+
+.hero-ctas {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.8rem 1.6rem;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn.primary {
+  background: var(--dorado);
+  color: var(--blanco);
+}
+
+.btn.primary:hover {
+  background: var(--verde-oscuro);
+}
+
+.btn.ghost {
+  border: 2px solid var(--blanco);
+  color: var(--blanco);
+}
+
+.btn.ghost:hover {
+  background: var(--blanco);
+  color: var(--verde-oscuro);
+}
+
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.features .f {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.95rem;
+}
+
+/* Panel lateral */
+.hero-panel {
+  background: var(--blanco);
+  color: #333;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s ease;
+}
+
+.panel-inner {
+  text-align: center;
+  padding: 2rem;
+}
+
+.panel-wsp {
+  display: inline-block;
+  background: var(--verde);
+  color: var(--blanco);
+  padding: 0.7rem 1.5rem;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.panel-wsp:hover {
+  background: var(--verde-oscuro);
+}
+
+.panel-stats {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 1.5rem;
+}
+
+.panel-stats div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.panel-stats strong {
+  color: var(--verde-oscuro);
+  font-size: 1.2rem;
+}
+
+/* ==============================
+   DIAGONAL DIVIDER
+   ============================== */
+.hero-divider {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  display: block;
+}
+
+/* ==============================
+   SECCIONES GENERALES
+   ============================== */
+.section {
+  padding: 5rem 0;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: var(--verde-oscuro);
+}
+
+/* ==============================
+   CATÁLOGO DE PRODUCTOS
+   ============================== */
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.product {
+  background: var(--blanco);
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transform: translateY(0);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.product:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+.product img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 1.5rem;
+}
+
+.card-body h3 {
+  color: var(--verde-oscuro);
+}
+
+.muted {
+  color: #666;
+  font-size: 0.95rem;
+}
+
+.meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.price {
+  font-weight: 700;
+  color: var(--verde);
+}
+
+.tag {
+  background: var(--verde-oscuro);
+  color: var(--blanco);
+  padding: 0.2rem 0.6rem;
+  border-radius: 6px;
+  font-size: 0.8rem;
+}
+
+/* ==============================
+   DETALLE DEL PRODUCTO
+   ============================== */
+.split-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.slanted {
+  transform: skewY(-4deg);
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.slanted img {
+  transform: skewY(4deg);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.checklist {
+  list-style: none;
+  margin-top: 1rem;
+}
+
+.checklist li::before {
+  content: "✔ ";
+  color: var(--verde);
+}
+
+/* ==============================
+   COTIZACIÓN
+   ============================== */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 2rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form input, 
+.form select, 
+.form textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.btn.full {
+  width: 100%;
+}
+
+.contact-side {
+  background: var(--verde-oscuro);
+  color: var(--blanco);
+  border-radius: 12px;
+  padding: 2rem;
+}
+
+.contact-info {
+  margin-top: 1.5rem;
+  font-size: 0.95rem;
+}
+
+/* ==============================
+   ENCUESTA
+   ============================== */
+.survey {
+  text-align: center;
+}
+
+.form-inline {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  max-width: 400px;
+  margin: auto;
+}
+
+.thanks {
+  background: var(--verde);
+  color: var(--blanco);
+  padding: 1rem;
+  border-radius: 12px;
+  margin-top: 1rem;
+}
+
+/* ==============================
+   FOOTER
+   ============================== */
+.site-footer {
+  background: var(--verde-oscuro);
+  color: var(--blanco);
+  text-align: center;
+  padding: 1.5rem 0;
+}
+
+.foot-nav a {
+  color: var(--blanco);
+  text-decoration: none;
+  margin: 0 0.5rem;
+  font-weight: 500;
+}
+
+.foot-nav a:hover {
+  text-decoration: underline;
+}
+
+/* ==============================
+   BOTÓN WHATSAPP
+   ============================== */
+.wsp-float {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background: var(--verde);
+  color: var(--blanco);
+  font-size: 1.8rem;
+  border-radius: 50%;
+  padding: 0.8rem 1rem;
+  text-decoration: none;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.3);
+  transition: 0.3s;
+  z-index: 999;
+}
+
+.wsp-float:hover {
+  background: var(--dorado);
+  transform: scale(1.1);
+}
+
+/* ==============================
+   ANIMACIONES
+   ============================== */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.9s ease-out;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ==============================
+   RESPONSIVE
+   ============================== */
+@media (max-width: 992px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: flex;
+  }
+
+  .nav-list {
+    display: none;
+    flex-direction: column;
+    background: var(--blanco);
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 100%;
+    padding: 1rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+
+  .nav-list.show {
+    display: flex;
+  }
+
+  .hero-card h1 {
+    font-size: 2rem;
+  }
+
+  .split-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-grid {
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-card {
+    padding: 1.5rem;
+  }
+
+  .product img {
+    height: 180px;
+  }
+
+  .form-inline {
+    width: 100%;
+  }
+}

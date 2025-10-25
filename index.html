@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>GYS IMPORTPLAST — Innovación Eco-Tecnológica</title>
+
+  <!-- Link CSS (web3.css) -->
+  <link rel="stylesheet" href="web3.css">
+
+  <!-- Web fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- TOP NAV (transparent over hero) -->
+  <header class="topbar" role="banner">
+    <div class="container topbar-inner">
+      <div class="brand">
+        <div class="brand-mark" aria-hidden="true">♻️</div>
+        <div class="brand-text">
+          <div class="brand-title">GYS IMPORTPLAST</div>
+          <div class="brand-sub">Envases biodegradables</div>
+        </div>
+      </div>
+
+      <nav class="nav" role="navigation" aria-label="Principal">
+        <button class="nav-toggle" id="menu-btn" aria-expanded="false" aria-controls="main-nav">
+          <span></span><span></span><span></span>
+        </button>
+
+        <ul id="main-nav" class="nav-list">
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#catalogo">Catálogo</a></li>
+          <li><a href="#detalle">Detalle</a></li>
+          <li><a href="#contacto">Cotización</a></li>
+          <li><a href="#encuesta">Encuesta</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO: split layout with background image and animated tagline -->
+  <main>
+    <section id="inicio" class="hero">
+      <div class="hero-bg" style="background-image: url('imagenes/imagen1.jpg')"></div>
+
+      <div class="container hero-grid">
+        <div class="hero-card reveal">
+          <h1>Diseño inteligente. Materiales responsables.</h1>
+          <p class="lead">Creamos envases y utensilios biodegradables que combinan rendimiento industrial y menor impacto ambiental.</p>
+          <div class="hero-ctas">
+            <a href="#catalogo" class="btn primary">Ver catálogo</a>
+            <a href="#contacto" class="btn ghost">Solicitar cotización</a>
+          </div>
+          <div class="features">
+            <div class="f">
+              <strong>✅</strong>
+              <span>Certificaciones internacionales</span>
+            </div>
+            <div class="f">
+              <strong>♻️</strong>
+              <span>Materiales compostables</span>
+            </div>
+            <div class="f">
+              <strong>📦</strong>
+              <span>Escalas para empresas</span>
+            </div>
+          </div>
+        </div>
+
+        <aside class="hero-panel reveal">
+          <div class="panel-inner">
+            <h3>Contacto rápido</h3>
+            <p class="muted">Recibe respuesta en <strong>24–48 hrs</strong></p>
+            <a class="panel-wsp" href="https://wa.me/51937283938" target="_blank" rel="noopener">💬 WhatsApp</a>
+            <div class="panel-stats">
+              <div><strong>500+</strong><span>Clientes</span></div>
+              <div><strong>1M+</strong><span>Envases/año</span></div>
+            </div>
+          </div>
+        </aside>
+      </div>
+
+      <!-- diagonal separator (SVG) -->
+      <svg class="hero-divider" viewBox="0 0 100 10" preserveAspectRatio="none" aria-hidden="true">
+        <polygon fill="var(--bg)" points="0,10 100,0 100,10 0,10"></polygon>
+      </svg>
+    </section>
+
+    <!-- CATÁLOGO: cards with 3D hover and staggered reveal -->
+    <section id="catalogo" class="section diagonal-right">
+      <div class="container">
+        <h2 class="section-title reveal">Catálogo destacado</h2>
+
+        <div class="grid products">
+          <article class="card product reveal">
+            <div class="media"><img src="imagenes/imagen2.jpg" alt="Envase ecológico premium"></div>
+            <div class="card-body">
+              <h3>Envase Ecológico Premium</h3>
+              <p class="muted">Pulpa natural, resistente y compostable.</p>
+              <div class="meta">
+                <span class="price">S/ 2.50</span>
+                <span class="tag">ISO 14001</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="card product reveal">
+            <div class="media"><img src="imagenes/imagen3.jpg" alt="Bolsa compostable"></div>
+            <div class="card-body">
+              <h3>Bolsa Compostable</h3>
+              <p class="muted">Alta degradación en condiciones industriales.</p>
+              <div class="meta">
+                <span class="price">S/ 1.00</span>
+                <span class="tag">GreenSeal</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="card product reveal">
+            <div class="media"><img src="imagenes/imagen4.jpg" alt="Utensilios biodegradables"></div>
+            <div class="card-body">
+              <h3>Utensilios Biodegradables</h3>
+              <p class="muted">Diseño ergonómico y compostable.</p>
+              <div class="meta">
+                <span class="price">S/ 5.50</span>
+                <span class="tag">EcoCert</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- DETALLE: asymmetric split with image on a slanted card -->
+    <section id="detalle" class="section split-up">
+      <div class="container split-grid">
+        <div class="split-media reveal">
+          <div class="slanted">
+            <img src="imagenes/imagen5.jpg" alt="Detalle del producto">
+          </div>
+        </div>
+
+        <div class="split-content reveal">
+          <h2>Beneficios y materiales</h2>
+          <p class="muted">Nuestros productos están diseñados para rendir en el uso real y descomponerse sin residuos dañinos.</p>
+          <ul class="checklist">
+            <li>Material: fibra vegetal + bioplástico</li>
+            <li>Resistencia térmica hasta 90°C</li>
+            <li>Certificaciones: ASTM, ISO y locales</li>
+            <li>Opciones branding y pedidos a medida</li>
+          </ul>
+
+          <div class="cta-row">
+            <a href="#contacto" class="btn primary">Cotizar ahora</a>
+            <a href="#catalogo" class="btn ghost">Ver más</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COTIZACIÓN: slide-in contact form (desktop shows as side panel) -->
+    <section id="contacto" class="section">
+      <div class="container contact-grid">
+        <div class="contact-form reveal">
+          <h2>Solicita una cotización</h2>
+          <form id="formCot" class="form">
+            <label for="name">Nombre y empresa</label>
+            <input id="name" name="name" type="text" required>
+
+            <label for="email">Correo electrónico</label>
+            <input id="email" name="email" type="email" required>
+
+            <label for="producto">Producto</label>
+            <select id="producto" name="producto" required>
+              <option value="">Selecciona</option>
+              <option>Envase Ecológico Premium</option>
+              <option>Bolsa Compostable</option>
+              <option>Utensilios Biodegradables</option>
+            </select>
+
+            <label for="cantidad">Cantidad estimada</label>
+            <input id="cantidad" name="cantidad" type="text">
+
+            <label for="msg">Mensaje</label>
+            <textarea id="msg" name="msg" rows="4"></textarea>
+
+            <button type="submit" class="btn primary full">Solicitar</button>
+          </form>
+        </div>
+
+        <aside class="contact-side reveal">
+          <h3>Contacto directo</h3>
+          <p class="muted">También puedes escribirnos por WhatsApp para una respuesta más rápida.</p>
+          <a href="https://wa.me/51937283938" target="_blank" class="btn ghost">Abrir WhatsApp</a>
+
+          <div class="contact-info">
+            <div><strong>Tel:</strong> +51 937 283 938</div>
+            <div><strong>Email:</strong> ventas@gysimportplast.pe</div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ENCUESTA: compact grid + thanks micro-interaction -->
+    <section id="encuesta" class="section compact">
+      <div class="container">
+        <h2>Tu opinión importa</h2>
+        <div class="survey reveal">
+          <form id="surveyForm" class="form-inline">
+            <label for="satisfaction">¿Cómo calificarías tu experiencia?</label>
+            <select id="satisfaction" required>
+              <option value="">Selecciona</option>
+              <option>Excelente</option>
+              <option>Buena</option>
+              <option>Regular</option>
+              <option>Mala</option>
+            </select>
+
+            <label for="comment">Comentario (opcional)</label>
+            <input id="comment" type="text" placeholder="Escribe algo...">
+
+            <button type="submit" class="btn primary">Enviar</button>
+          </form>
+          <div id="thanks" class="thanks" hidden>
+            <strong>¡Gracias!</strong>
+            <p>Valoramos tu opinión — te responderemos si lo solicitas.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <div>© 2025 GYS IMPORTPLAST</div>
+      <nav class="foot-nav" aria-label="Pie de página">
+        <a href="#inicio">Inicio</a>
+        <a href="#catalogo">Catálogo</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp -->
+  <a class="wsp-float" href="https://wa.me/51937283938" target="_blank" aria-label="WhatsApp">💬</a>
+
+  <!-- JS (web3.js) -->
+  <script src="web3.js"></script>
+</body>
+</html>
